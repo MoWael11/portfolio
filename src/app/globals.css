@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 120 100% 4%;
+    --foreground: 0 0% 96.86%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 96.86%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 96.86%;
+    --primary: 0 0% 96.86%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 96.86%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 96.86%;
+    --destructive: 0 66.39% 46.67%;
+    --destructive-foreground: 0 0% 96.86%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0.5rem;
+  }
+
+  body {
+    @apply bg-background min-h-screen text-primary;
+  }
+
+  * {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: var(--background);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #545454;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0px 0px 8px white;
+  }
+}
+
+@layer components {
+  .card::before {
+    background: radial-gradient(
+      800px circle at var(--mouse-x) var(--mouse-y),
+      rgba(255, 255, 255, 0.06),
+      transparent 40%
+    );
+    opacity: 0;
+  }
+  .card-border {
+    background: radial-gradient(
+      400px circle at var(--mouse-x) var(--mouse-y),
+      rgba(255, 255, 255, 0.763),
+      transparent 40%
+    );
+    opacity: 0;
+  }
+  #cards:hover > .card::before {
+    opacity: 1;
+  }
+  #cards:hover > .card > .card-border {
+    opacity: 1;
+  }
+}
