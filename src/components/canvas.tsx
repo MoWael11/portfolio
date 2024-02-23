@@ -10,7 +10,7 @@ import { Settings } from 'lucide-react'
 export const Canvas = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const imageRef = useRef<HTMLImageElement>(null)
-  const [render, setRender] = useState(false)
+  const [render, setRender] = useState(true)
   const [width, setWidth] = useState(0)
 
   const { data, setIsOpen } = useCanvas()
