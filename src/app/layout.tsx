@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     default: 'Mohamed Wael',
     template: '%s | Mohamed Wael',
   },
-  description: 'Portofolio website of Mohamed Wael',
+  description: 'A passionate developer',
   generator: 'Next.js',
   applicationName: 'Portfolio',
   referrer: 'origin-when-cross-origin',
@@ -59,6 +59,9 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang='en'>
+      <head>
+        <meta name='google-site-verification' content='N8NSxi7VrsgAzWOI5BgFhaAAv9BpHNVvTRGMYYpjXgc' />
+      </head>
       <body className={inter.className}>
         {children}
         <ModalProvider />
