@@ -42,10 +42,10 @@ export default function Home() {
               <p className='w-0 overflow-hidden py-1 text-[22px] sm:text-3xl animate-[text_1s_0.5s_forwards]'>
                 I&apos;m&nbsp;Mohamed&nbsp;Wael
               </p>
-              <p className='w-0 overflow-hidden py-1 text-[22px] sm:text-3xl animate-[text_1s_1.5s_forwards]'>
+              <p className='w-0 overflow-hidden py-1 text-[22px] sm:text-3xl animate-[text_1s_1.1s_forwards]'>
                 a&nbsp;passionate&nbsp;developer
               </p>
-              <p className='w-0 overflow-hidden py-1 text-[22px] sm:text-3xl animate-[text_1s_2.5s_forwards]'>
+              <p className='w-0 overflow-hidden py-1 text-[22px] sm:text-3xl animate-[text_1s_1.8s_forwards]'>
                 from&nbsp;Egypt
               </p>
             </div>
