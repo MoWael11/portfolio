@@ -7,11 +7,11 @@ import './globals.css'
 const inter = Open_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: {
-    default: 'Mohamed Wael',
-    template: '%s | Mohamed Wael',
+  title: 'Mohamed Wael',
+  description: 'A passionate developer from egypt',
+  verification: {
+    google: 'N8NSxi7VrsgAzWOI5BgFhaAAv9BpHNVvTRGMYYpjXgc',
   },
-  description: 'A passionate developer',
   generator: 'Next.js',
   applicationName: 'Portfolio',
   referrer: 'origin-when-cross-origin',
@@ -37,14 +37,16 @@ export const metadata: Metadata = {
   classification: 'Portfolio',
   openGraph: {
     images: {
-      url: '/images/thumbnail.png',
+      url: '/images/main.png',
+      type: 'image/png',
     },
   },
   twitter: {
     title: 'Mohamed Wael',
     description: 'Passionate Developer',
     images: {
-      url: '/images/thumbnail.png',
+      url: '/images/main.png',
+      type: 'image/png',
     },
     creator: '@mowael11',
     card: 'summary_large_image',
@@ -59,9 +61,6 @@ export default async function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <head>
-        <meta name='google-site-verification' content='N8NSxi7VrsgAzWOI5BgFhaAAv9BpHNVvTRGMYYpjXgc' />
-      </head>
       <body className={inter.className}>
         {children}
         <ModalProvider />

@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const routes = [].map((route) => ({
+  const routes = [''].map((route) => ({
     url: `${process.env.NODE_URL}${route}`,
     lastModified: new Date().toISOString(),
   }))
