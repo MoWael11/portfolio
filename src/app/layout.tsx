@@ -7,15 +7,25 @@ import './globals.css'
 const inter = Open_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Mohamed Wael',
-  description: 'A passionate developer from egypt',
+  title: 'Mohamed Wael - Software Developer',
+  description:
+    "Explore Mohamed Wael's software developer portfolio showcasing projects, skills, and expertise in web development.",
   verification: {
     google: 'N8NSxi7VrsgAzWOI5BgFhaAAv9BpHNVvTRGMYYpjXgc',
   },
   generator: 'Next.js',
   applicationName: 'Portfolio',
   referrer: 'origin-when-cross-origin',
-  keywords: ['Mohamed', 'Wael', 'MoWael', 'Portofolio', 'Skills', 'Dev', 'Developer', 'Software', 'Engineer'],
+  keywords: [
+    'Mohamed Wael',
+    'MoWael',
+    'Software Developer',
+    'Web Development',
+    'Portfolio',
+    'Projects',
+    'Engineer',
+    'Skills',
+  ],
   authors: [{ name: 'Mohamed', url: 'https://github.com/MoWael11' }],
   creator: 'Mohamed Wael',
   publisher: 'Mohamed Wael',
@@ -37,16 +47,17 @@ export const metadata: Metadata = {
   classification: 'Portfolio',
   openGraph: {
     images: {
-      url: '/images/main.png',
-      type: 'image/png',
+      url: '/images/main.webp',
+      type: 'image/webp',
     },
   },
   twitter: {
-    title: 'Mohamed Wael',
-    description: 'Passionate Developer',
+    title: 'Mohamed Wael- Software Developer',
+    description:
+      "Hi! I'm Mohamed, a passionate developer with expertise in web development. Let's build something amazing together!",
     images: {
       url: '/images/main.png',
-      type: 'image/png',
+      type: 'image/webp',
     },
     creator: '@mowael11',
     card: 'summary_large_image',
