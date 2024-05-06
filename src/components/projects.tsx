@@ -103,38 +103,6 @@ export const Projects = () => {
                 <Image
                   width={1200}
                   height={1200}
-                  src='/images/guitar.png'
-                  alt='guitar image'
-                  className='h-full w-full select-none'
-                />
-              </div>
-              <div className='gap-2 py-2 flex flex-col'>
-                <h3 className='mb-2 text-xl font-medium sm:text-2xl'>Music website</h3>
-                <p>
-                  Category <span className='text-zinc-400 sm:text-lg'>Informational</span>
-                </p>
-              </div>
-            </div>
-            <p className='w-[85%] text-[16px] leading-5 sm:text-lg'>
-              Explore the many different styles of music, and learn about their unique qualities.
-            </p>
-          </div>
-          <Link
-            className={cn(buttonVariants({ size: 'sm' }), 'px-2 py-1 absolute bottom-4 right-4 z-[4]')}
-            target='_blank'
-            href='https://mowael11.github.io/music-web'
-          >
-            Visit
-          </Link>
-          <div className='card-border absolute left-0 top-0 z-[1] hidden h-full w-full rounded-xl transition-opacity duration-500 md:block'></div>
-        </div>
-        <div className='card relative h-full flex rounded-xl bg-[rgb(255,255,255)]/[0.1] p-[1px] before:absolute before:left-0 before:top-0 before:z-[3] before:hidden before:h-full before:w-full before:rounded-xl before:transition-opacity before:duration-500 before:content-[""] before:hover:opacity-100 before:md:block'>
-          <div className='relative z-[2] flex w-full flex-col gap-2 rounded-xl bg-[#171717] p-2'>
-            <div className='flex flex-col gap-4 sm:flex-row'>
-              <div className='relative w-full flex-none overflow-hidden rounded-lg sm:w-[220px]'>
-                <Image
-                  width={1200}
-                  height={1200}
                   src='/images/dashboard.png'
                   alt='dashboard image'
                   className='h-full w-full select-none'
