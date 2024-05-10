@@ -85,7 +85,7 @@ export const Skills = () => {
             </Link>
           </ActionToolTip>
         </li>
-        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-100'>
+        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-200'>
           <ActionToolTip align='center' side='top' label='NextJS'>
             <Link
               replace={true}
@@ -104,7 +104,7 @@ export const Skills = () => {
             </Link>
           </ActionToolTip>
         </li>
-        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-200'>
+        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-300'>
           <ActionToolTip align='center' side='top' label='NodeJS'>
             <Link
               replace={true}
@@ -123,7 +123,7 @@ export const Skills = () => {
             </Link>
           </ActionToolTip>
         </li>
-        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-200'>
+        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-400'>
           <ActionToolTip align='center' side='top' label='PostgreSQL'>
             <Link
               replace={true}
@@ -161,7 +161,7 @@ export const Skills = () => {
             </Link>
           </ActionToolTip>
         </li>
-        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-500'>
+        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-600'>
           <ActionToolTip align='center' side='top' label='Docker'>
             <Link
               replace={true}
@@ -180,7 +180,7 @@ export const Skills = () => {
             </Link>
           </ActionToolTip>
         </li>
-        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-500'>
+        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-700'>
           <ActionToolTip align='center' side='top' label='TailwindCSS'>
             <Link
               replace={true}
@@ -199,7 +199,7 @@ export const Skills = () => {
             </Link>
           </ActionToolTip>
         </li>
-        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-700'>
+        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-800'>
           <ActionToolTip align='center' side='top' label='React'>
             <Link
               replace={true}
@@ -218,7 +218,7 @@ export const Skills = () => {
             </Link>
           </ActionToolTip>
         </li>
-        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-700'>
+        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-900'>
           <ActionToolTip align='center' side='top' label='Python'>
             <Link
               replace={true}
@@ -237,7 +237,7 @@ export const Skills = () => {
             </Link>
           </ActionToolTip>
         </li>
-        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-700'>
+        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-1100'>
           <ActionToolTip align='center' side='top' label='Prisma'>
             <Link
               replace={true}
@@ -256,7 +256,7 @@ export const Skills = () => {
             </Link>
           </ActionToolTip>
         </li>
-        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-1000'>
+        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-1200'>
           <ActionToolTip align='center' side='top' label='HTML5'>
             <Link
               replace={true}
@@ -275,7 +275,7 @@ export const Skills = () => {
             </Link>
           </ActionToolTip>
         </li>
-        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-1000'>
+        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-1300'>
           <ActionToolTip align='center' side='top' label='CSS'>
             <Link
               replace={true}
@@ -294,7 +294,7 @@ export const Skills = () => {
             </Link>
           </ActionToolTip>
         </li>
-        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-1000'>
+        <li className='bg-[#171717] duration-700 -translate-x-full rounded-lg border border-zinc-700 opacity-0 transition md:delay-1400'>
           <ActionToolTip align='center' side='top' label='Javascript'>
             <Link
               replace={true}

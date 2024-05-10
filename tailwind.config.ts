@@ -2,6 +2,7 @@ import type { Config } from 'tailwindcss'
 
 const config = {
   content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
+  prefix: '',
   theme: {
     container: {
       center: true,
@@ -12,6 +13,37 @@ const config = {
       },
     },
     extend: {
+      transitionDelay: {
+        '200': '200ms',
+        '300': '300ms',
+        '400': '400ms',
+        '500': '500ms',
+        '600': '600ms',
+        '700': '700ms',
+        '800': '800ms',
+        '900': '900ms',
+        '1000': '1000ms',
+        '1100': '1100ms',
+        '1200': '1200ms',
+        '1300': '1300ms',
+        '1400': '1400ms',
+        '1500': '1500ms',
+        '1600': '1600ms',
+        '1700': '1700ms',
+        '1800': '1800ms',
+        '1900': '1900ms',
+        '2000': '2000ms',
+        '2100': '2100ms',
+        '2200': '2200ms',
+        '2300': '2300ms',
+        '2400': '2400ms',
+        '2500': '2500ms',
+        '2600': '2600ms',
+        '2700': '2700ms',
+        '2800': '2800ms',
+        '2900': '2900ms',
+        '3000': '3000ms',
+      },
       screens: {
         sm: '576px',
         md: '768px',
@@ -76,7 +108,7 @@ const config = {
             width: '100%',
           },
         },
-        'first-dot-animation': {
+        'first-dot': {
           '0%': {
             transform: 'translate(58px, -8px)',
             'box-shadow': '0px 0px 2px 1px rgb(252,255,197)',
@@ -97,7 +129,7 @@ const config = {
             height: '0px',
           },
         },
-        'second-dot-animation': {
+        'second-dot': {
           '0%': {
             transform: 'translate(20px, -10px)',
             'box-shadow': '0px 0px 2px 1px rgb(252,255,197)',
@@ -118,7 +150,7 @@ const config = {
             height: '0px',
           },
         },
-        'third-dot-animation': {
+        'third-dot': {
           '0%': {
             transform: 'translate(24px, 36px)',
             'box-shadow': '0px 0px 3px 2px rgb(252,255,197)',
@@ -145,7 +177,7 @@ const config = {
             height: '0px',
           },
         },
-        'fourth-dot-animation': {
+        'fourth-dot': {
           '0%': {
             transform: 'translate(4px, -10px)',
             'box-shadow': '0px 0px 10px 6px rgb(252,255,197)',
@@ -164,10 +196,10 @@ const config = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'first-dot': 'first-dot-animation 10s linear infinite',
-        'second-dot': 'second-dot-animation 8s 3s linear infinite',
-        'third-dot': 'third-dot-animation 6s 1s linear infinite',
-        'fourth-dot': 'fourth-dot-animation 12s 1s linear infinite',
+        'first-dot': 'first-dot 10s linear infinite',
+        'second-dot': 'second-dot 8s 3s linear infinite',
+        'third-dot': 'third-dot 6s 1s linear infinite',
+        'fourth-dot': 'fourth-dot 12s 1s linear infinite',
       },
       gridTemplateColumns: {
         projects: 'repeat(auto-fill, minmax(450px, 1fr))',

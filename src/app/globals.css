@@ -33,6 +33,7 @@
   * {
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
+    border-color: hsl(var(--border));
   }
 
   ::-webkit-scrollbar {
