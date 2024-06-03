@@ -1,3 +1,25 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended" // his plugin contains a collection of rules specific to TypeScript.
+  ],
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  // This parser allows ESLint to understand TypeScript syntax.-
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "no-undef": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-var-requires": "off"
+  },
+  "ignorePatterns": ["next.config.mjs"]
 }

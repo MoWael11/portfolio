@@ -1,8 +1,11 @@
-import { ModalProvider } from '@/components/providers/modal-provider'
-import { Toaster } from '@/components/ui/toaster'
+import './globals.css'
 import type { Metadata } from 'next'
 import { Open_Sans } from 'next/font/google'
-import './globals.css'
+import { Footer } from '@/components/footer'
+import { Header } from '@/components/header'
+import { Toaster } from '@/components/ui/toaster'
+import { ThemeProvider } from '@/components/providers/theme-provider'
+import { MobileNav } from '@/components/mobile-nav'
 
 const inter = Open_Sans({ subsets: ['latin'] })
 
@@ -11,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "Explore Mohamed Wael's software developer portfolio showcasing projects, skills, and expertise in web development.",
   verification: {
-    google: 'N8NSxi7VrsgAzWOI5BgFhaAAv9BpHNVvTRGMYYpjXgc',
+    google: 'N8NSxi7VrsgAzWOI5BgFhaAAv9BpHNVvTRGMYYpjXgc'
   },
   generator: 'Next.js',
   applicationName: 'Portfolio',
@@ -24,7 +27,7 @@ export const metadata: Metadata = {
     'Portfolio',
     'Projects',
     'Engineer',
-    'Skills',
+    'Skills'
   ],
   authors: [{ name: 'Mohamed', url: 'https://github.com/MoWael11' }],
   creator: 'Mohamed Wael',
@@ -33,7 +36,7 @@ export const metadata: Metadata = {
   formatDetection: {
     email: false,
     address: false,
-    telephone: false,
+    telephone: false
   },
   icons: {
     icon: '/icon/favicon.svg',
@@ -41,15 +44,15 @@ export const metadata: Metadata = {
     apple: '/icon/apple-touch-icon.png',
     other: {
       rel: 'android-chrome-192x192.png',
-      url: '/icon/android-chrome-192x192.png',
-    },
+      url: '/icon/android-chrome-192x192.png'
+    }
   },
   classification: 'Portfolio',
   openGraph: {
     images: {
       url: '/images/main.webp',
-      type: 'image/webp',
-    },
+      type: 'image/webp'
+    }
   },
   twitter: {
     title: 'Mohamed Wael- Software Developer',
@@ -57,25 +60,35 @@ export const metadata: Metadata = {
       "Hi! I'm Mohamed, a passionate developer with expertise in web development. Let's build something amazing together!",
     images: {
       url: '/images/main.png',
-      type: 'image/webp',
+      type: 'image/webp'
     },
     creator: '@mowael11',
-    card: 'summary_large_image',
+    card: 'summary_large_image'
   },
-  metadataBase: new URL('https://mowael.com'),
+  metadataBase: new URL('https://mowael.com')
 }
 
 export default async function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang='en'>
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        {children}
-        <ModalProvider />
-        <Toaster />
+        <ThemeProvider
+          defaultTheme="dark"
+          attribute="class"
+          storageKey="theme"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
+          <Header />
+          <MobileNav />
+          {children}
+          <Footer />
+          <Toaster />
+        </ThemeProvider>
       </body>
     </html>
   )

@@ -10,15 +10,15 @@ export async function sendMail({ body, subject }: { body: string; subject: strin
     port: 2525,
     auth: {
       user: SMTP_EMAIL,
-      pass: SMTP_PASSWORD,
-    },
+      pass: SMTP_PASSWORD
+    }
   })
 
   await trnasport.sendMail({
     from: SMTP_EMAIL,
     to: EMAIL,
     subject,
-    html: body,
+    html: body
   })
 }
 

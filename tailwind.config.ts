@@ -1,16 +1,18 @@
+import svgToDataUri from 'mini-svg-data-uri'
 import type { Config } from 'tailwindcss'
+const { default: flattenColorPalette } = require('tailwindcss/lib/util/flattenColorPalette')
 
 const config = {
-  content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
-  prefix: '',
+  darkMode: 'selector',
+  content: ['./components/**/*.{ts,tsx}', './app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
   theme: {
     container: {
       center: true,
       padding: '2rem',
       screens: {
-        xl: '1100px',
-        xxl: '1300px',
-      },
+        xl: '1200px',
+        xxl: '1400px'
+      }
     },
     extend: {
       transitionDelay: {
@@ -42,14 +44,14 @@ const config = {
         '2700': '2700ms',
         '2800': '2800ms',
         '2900': '2900ms',
-        '3000': '3000ms',
+        '3000': '3000ms'
       },
       screens: {
         sm: '576px',
         md: '768px',
         lg: '920px',
         xl: '1200px',
-        xxl: '1400px',
+        xxl: '1400px'
       },
       colors: {
         border: 'hsl(var(--border))',
@@ -59,155 +61,122 @@ const config = {
         foreground: 'hsl(var(--foreground))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))',
+          foreground: 'hsl(var(--primary-foreground))'
         },
         secondary: {
           DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))',
+          foreground: 'hsl(var(--secondary-foreground))'
         },
         destructive: {
           DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
+          foreground: 'hsl(var(--destructive-foreground))'
         },
         muted: {
           DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
+          foreground: 'hsl(var(--muted-foreground))'
         },
         accent: {
           DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))',
+          foreground: 'hsl(var(--accent-foreground))'
         },
         popover: {
           DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))',
+          foreground: 'hsl(var(--popover-foreground))'
         },
         card: {
           DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))',
-        },
+          foreground: 'hsl(var(--card-foreground))'
+        }
       },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)',
+        sm: 'calc(var(--radius) - 4px)'
       },
       keyframes: {
         'accordion-down': {
           from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: 'var(--radix-accordion-content-height)' }
         },
         'accordion-up': {
           from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' },
+          to: { height: '0' }
         },
-        text: {
+        spotlight: {
+          '0%': {
+            opacity: '0',
+            transform: 'translate(-72%, -62%) scale(0.5)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translate(-50%,-40%) scale(1)'
+          }
+        },
+        'slide-in': {
+          '0%': {
+            transform: 'translateX(-100%)',
+            opacity: '0'
+          },
+          '100%': {
+            transform: 'translateX(0)',
+            opacity: '1'
+          }
+        },
+        shimmer: {
           from: {
-            width: '0',
+            backgroundPosition: '0 0'
           },
           to: {
-            width: '100%',
-          },
-        },
-        'first-dot': {
-          '0%': {
-            transform: 'translate(58px, -8px)',
-            'box-shadow': '0px 0px 2px 1px rgb(252,255,197)',
-            width: '2px',
-            height: '2px',
-          },
-          '20%': {
-            transform: 'translate(88px, -10px)',
-            'box-shadow': '0px 0px 10px 6px rgb(252,255,197)',
-            width: '2px',
-            height: '2px',
-          },
-          '100%': {
-            'background-color': '#f8ffb2',
-            transform: 'translate(168px, -10px)',
-            'box-shadow': '0px 0px 0px 0px rgb(252,255,197)',
-            width: '0px',
-            height: '0px',
-          },
-        },
-        'second-dot': {
-          '0%': {
-            transform: 'translate(20px, -10px)',
-            'box-shadow': '0px 0px 2px 1px rgb(252,255,197)',
-            width: '2px',
-            height: '2px',
-          },
-          '40%': {
-            transform: 'translate(48px, -40px)',
-            'box-shadow': '0px 0px 10px 6px rgb(252,255,197)',
-            width: '3px',
-            height: '3px',
-          },
-          '100%': {
-            'background-color': '#f8ffb2',
-            transform: 'translate(90px, -85px)',
-            'box-shadow': '0px 0px 0px 0px rgb(252,255,197)',
-            width: '0px',
-            height: '0px',
-          },
-        },
-        'third-dot': {
-          '0%': {
-            transform: 'translate(24px, 36px)',
-            'box-shadow': '0px 0px 3px 2px rgb(252,255,197)',
-            width: '1px',
-            height: '1px',
-          },
-          '40%': {
-            transform: 'translate(56px, 48px)',
-            'box-shadow': '0px 0px 20px 8px rgb(252,255,197)',
-            width: '2px',
-            height: '2px',
-          },
-          '75%': {
-            transform: 'translate(90px, 58px)',
-            'box-shadow': '0px 0px 4px 4px rgb(252,255,197)',
-            width: '2px',
-            height: '2px',
-          },
-          '100%': {
-            'background-color': '#f8ffb2',
-            transform: 'translate(110px, 68px)',
-            'box-shadow': '0px 0px 0px 0px rgb(252,255,197)',
-            width: '0px',
-            height: '0px',
-          },
-        },
-        'fourth-dot': {
-          '0%': {
-            transform: 'translate(4px, -10px)',
-            'box-shadow': '0px 0px 10px 6px rgb(252,255,197)',
-            width: '1px',
-            height: '1px',
-          },
-          '100%': {
-            'background-color': '#f8ffb2',
-            transform: 'translate(40px, -92px)',
-            'box-shadow': '0px 0px 0px 0px rgb(252,255,197)',
-            width: '0px',
-            height: '0px',
-          },
-        },
+            backgroundPosition: '-200% 0'
+          }
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'first-dot': 'first-dot 10s linear infinite',
-        'second-dot': 'second-dot 8s 3s linear infinite',
-        'third-dot': 'third-dot 6s 1s linear infinite',
-        'fourth-dot': 'fourth-dot 12s 1s linear infinite',
+        spotlight: 'spotlight 2s ease .75s 1 forwards',
+        'slide-in': 'slide-in 1s ease forwards',
+        shimmer: 'shimmer 2s linear infinite'
       },
       gridTemplateColumns: {
         projects: 'repeat(auto-fill, minmax(450px, 1fr))',
-        'projects-sm': 'repeat(auto-fill, minmax(280px, 1fr))',
-      },
-    },
+        'projects-sm': 'repeat(auto-fill, minmax(280px, 1fr))'
+      }
+    }
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [require('tailwindcss-animate'), bgGrid, addVariablesForColors]
 } satisfies Config
+
+function bgGrid({ matchUtilities, theme }: any) {
+  matchUtilities(
+    {
+      'bg-grid': (value: any) => ({
+        backgroundImage: `url("${svgToDataUri(
+          `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
+        )}")`
+      }),
+      'bg-grid-small': (value: any) => ({
+        backgroundImage: `url("${svgToDataUri(
+          `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="8" height="8" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
+        )}")`
+      }),
+      'bg-dot': (value: any) => ({
+        backgroundImage: `url("${svgToDataUri(
+          `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none"><circle fill="${value}" id="pattern-circle" cx="10" cy="10" r="1.6257413380501518"></circle></svg>`
+        )}")`
+      })
+    },
+    { values: flattenColorPalette(theme('backgroundColor')), type: 'color' }
+  )
+}
+
+function addVariablesForColors({ addBase, theme }: any) {
+  const allColors = flattenColorPalette(theme('colors'))
+  const newVars = Object.fromEntries(Object.entries(allColors).map(([key, val]) => [`--${key}`, val]))
+
+  addBase({
+    ':root': newVars
+  })
+}
 
 export default config

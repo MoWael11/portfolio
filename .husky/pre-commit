@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# Check if pnpm is installed
+if command -v pnpm &> /dev/null
+then
+    # If pnpm is installed, run lint-staged using pnpm
+    echo "Running lint-staged with pnpm..."
+    pnpm dlx lint-staged
+else
+    # If pnpm is not installed, check for npm or yarn
+    if command -v npm &> /dev/null
+    then
+        # If npm is available, run lint-staged using npm
+        echo "Running lint-staged with npm..."
+        npx lint-staged
+    elif command -v yarn &> /dev/null
+    then
+        # If yarn is available, run lint-staged using yarn
+        echo "Running lint-staged with yarn..."
+        npx lint-staged --yarn
+    else
+        # If no package manager is found, display an error message and exit
+        echo "Error: No package manager found. Please install pnpm, npm, or yarn to run lint-staged."
+        exit 1
+    fi
+fi

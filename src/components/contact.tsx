@@ -16,7 +16,7 @@ const FormSchema = z.object({
   name: z.string().min(1, 'Name field is required'),
   phone: z.string().optional(),
   email: z.string().trim().min(1, 'Email field is required').email('Invalid email'),
-  message: z.string().min(1, 'Message field is required'),
+  message: z.string().min(1, 'Message field is required')
 })
 
 export const Contact = () => {
@@ -26,8 +26,8 @@ export const Contact = () => {
       email: '',
       message: '',
       name: '',
-      phone: '',
-    },
+      phone: ''
+    }
   })
 
   const isLoading = form.formState.isSubmitting
@@ -40,42 +40,42 @@ export const Contact = () => {
       await sendEmail(name, email, phone && phone?.length > 0 ? phone : ' - ', message)
       toast({
         title: 'Email sent',
-        description: "Thank you for reaching out! I'll get back to you as soon as possible.",
+        description: "Thank you for reaching out! I'll get back to you as soon as possible."
       })
       form.reset()
     } catch (err) {
       toast({
         title: 'Error sending email',
         description: 'Please try again later',
-        variant: 'destructive',
+        variant: 'destructive'
       })
     }
   }
 
   return (
     <section
-      id='contact'
-      className='container mt-20 min-h-[90vh] before:bg-cover before:bg-[url("/images/contact.png")] before:hidden before:sm:block before:w-[900px] before:h-[300px] md:before:w-[1110px] md:before:h-[450px] before:-translate-x-1/2 lg:before:translate-x-[-46%] relative before:absolute before:contrast-0 before:left-1/2 before:z-[-1] before:-translate-y-1/2 lg:before:w-[1400px] before:top-1/2 lg:before:h-[600px] before:content-[""]'
+      id="contact"
+      className='container relative mt-20 min-h-[90vh] before:absolute before:left-1/2 before:top-1/2 before:z-[-1] before:hidden before:h-[300px] before:w-[900px] before:-translate-x-1/2 before:-translate-y-1/2 before:bg-[url("/images/contact.png")] before:bg-cover before:contrast-0 before:content-[""] before:sm:block md:before:h-[450px] md:before:w-[1110px] lg:before:h-[600px] lg:before:w-[1400px] lg:before:translate-x-[-46%]'
     >
       <Heading>Contact</Heading>
-      <h3 className='mb-8 text-lg md:text-xl'>I&apos;m looking forward to hearing from you!</h3>
+      <h3 className="mb-8 text-lg md:text-xl">I&apos;m looking forward to hearing from you!</h3>
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+        <form onSubmit={form.handleSubmit(onSubmit)} className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <FormField
-            name='name'
+            name="name"
             control={form.control}
             render={({ field }) => (
-              <FormItem className='space-y-0'>
-                <label htmlFor='name' aria-label='name' className='sr-only'>
+              <FormItem className="space-y-0">
+                <label htmlFor="name" aria-label="name" className="sr-only">
                   insert your name
                 </label>
                 <FormControl>
                   <Input
-                    id='name'
+                    id="name"
                     spellCheck
-                    autoComplete='off'
-                    placeholder='Your Name'
-                    className='bg- w-full rounded-sm border border-zinc-700 bg-background/50 px-4 py-2 transition-colors duration-500 placeholder:transition-opacity placeholder:duration-500 focus:border-white focus:placeholder:opacity-0 focus-visible:ring-0 focus-visible:ring-offset-0'
+                    autoComplete="off"
+                    placeholder="Your Name"
+                    className="bg- w-full rounded-sm border border-border bg-background/50 px-4 py-2 transition-colors duration-500 placeholder:transition-opacity placeholder:duration-500 focus:border-white focus:placeholder:opacity-0 focus-visible:ring-0 focus-visible:ring-offset-0"
                     {...field}
                   />
                 </FormControl>
@@ -84,20 +84,20 @@ export const Contact = () => {
             )}
           />
           <FormField
-            name='phone'
+            name="phone"
             control={form.control}
             render={({ field }) => (
-              <FormItem className='space-y-0'>
-                <label htmlFor='phone' aria-label='phone' className='sr-only'>
+              <FormItem className="space-y-0">
+                <label htmlFor="phone" aria-label="phone" className="sr-only">
                   insert your phone number (optional)
                 </label>
                 <FormControl>
                   <Input
-                    id='phone'
+                    id="phone"
                     spellCheck
-                    autoComplete='off'
-                    placeholder='Your Phone (optional)'
-                    className='bg- w-full rounded-sm border border-zinc-700 bg-background/50 px-4 py-2 transition-colors duration-500 placeholder:transition-opacity placeholder:duration-500 focus:border-white focus:placeholder:opacity-0 focus-visible:ring-0 focus-visible:ring-offset-0'
+                    autoComplete="off"
+                    placeholder="Your Phone (optional)"
+                    className="bg- w-full rounded-sm border border-border bg-background/50 px-4 py-2 transition-colors duration-500 placeholder:transition-opacity placeholder:duration-500 focus:border-white focus:placeholder:opacity-0 focus-visible:ring-0 focus-visible:ring-offset-0"
                     {...field}
                   />
                 </FormControl>
@@ -106,20 +106,20 @@ export const Contact = () => {
             )}
           />
           <FormField
-            name='email'
+            name="email"
             control={form.control}
             render={({ field }) => (
-              <FormItem className='space-y-0 md:col-span-2'>
-                <label htmlFor='email' aria-label='email' className='sr-only'>
+              <FormItem className="space-y-0 md:col-span-2">
+                <label htmlFor="email" aria-label="email" className="sr-only">
                   insert your name
                 </label>
                 <FormControl>
                   <Input
-                    id='email'
+                    id="email"
                     spellCheck
-                    autoComplete='off'
-                    placeholder='Your Email'
-                    className='bg- w-full rounded-sm border border-zinc-700 bg-background/50 px-4 py-2 transition-colors duration-500 placeholder:transition-opacity placeholder:duration-500 focus:border-white focus:placeholder:opacity-0 focus-visible:ring-0 focus-visible:ring-offset-0'
+                    autoComplete="off"
+                    placeholder="Your Email"
+                    className="bg- w-full rounded-sm border border-border bg-background/50 px-4 py-2 transition-colors duration-500 placeholder:transition-opacity placeholder:duration-500 focus:border-white focus:placeholder:opacity-0 focus-visible:ring-0 focus-visible:ring-offset-0"
                     {...field}
                   />
                 </FormControl>
@@ -128,21 +128,21 @@ export const Contact = () => {
             )}
           />
           <FormField
-            name='message'
+            name="message"
             control={form.control}
             render={({ field }) => (
-              <FormItem className='space-y-0 md:col-span-2'>
-                <label htmlFor='message' aria-label='message' className='sr-only'>
+              <FormItem className="space-y-0 md:col-span-2">
+                <label htmlFor="message" aria-label="message" className="sr-only">
                   insert your message
                 </label>
                 <FormControl>
                   <textarea
-                    id='message'
+                    id="message"
                     spellCheck
-                    autoComplete='off'
-                    placeholder='Your Message'
+                    autoComplete="off"
+                    placeholder="Your Message"
                     rows={6}
-                    className='bg- w-full rounded-sm border border-zinc-700 bg-background/50 px-4 py-2 transition-colors duration-500 placeholder:transition-opacity placeholder:duration-500 focus:border-white focus:placeholder:opacity-0 focus-visible:ring-0 focus-visible:ring-offset-0'
+                    className="bg- w-full rounded-sm border border-border bg-background/50 px-4 py-2 transition-colors duration-500 placeholder:transition-opacity placeholder:duration-500 focus:border-white focus:placeholder:opacity-0 focus-visible:ring-0 focus-visible:ring-offset-0"
                     {...field}
                   />
                 </FormControl>
@@ -150,7 +150,7 @@ export const Contact = () => {
               </FormItem>
             )}
           />
-          <Button isLoading={isLoading} disabled={isLoading} className='md:col-span-2 rounded-sm'>
+          <Button isLoading={isLoading} disabled={isLoading} className="rounded-sm md:col-span-2">
             Submit
           </Button>
         </form>
