@@ -139,7 +139,7 @@ const config = {
         shimmer: 'shimmer 2s linear infinite'
       },
       gridTemplateColumns: {
-        projects: 'repeat(auto-fill, minmax(450px, 1fr))',
+        projects: 'repeat(auto-fill, minmax(460px, 1fr))',
         'projects-sm': 'repeat(auto-fill, minmax(280px, 1fr))'
       }
     }
