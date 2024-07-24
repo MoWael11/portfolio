@@ -27,7 +27,7 @@ export const Projects = () => {
         ref={cardsRef}
         onMouseMove={(e) => handleMouseMove(e)}
         id="cards"
-        className="grid grid-cols-projects-sm items-center justify-center gap-2 sm:grid-cols-projects"
+        className="grid-cols-projects-lg grid items-center justify-center gap-2 lg:grid-cols-projects"
       >
         <div className='card relative flex h-full rounded-xl bg-[rgb(255,255,255)]/[0.1] p-[1px] before:absolute before:left-0 before:top-0 before:z-[3] before:hidden before:h-full before:w-full before:rounded-xl before:transition-opacity before:duration-500 before:content-[""] before:hover:opacity-100 before:md:block'>
           <div className="relative z-[2] flex w-full flex-col gap-2 rounded-xl bg-[#111] p-2">

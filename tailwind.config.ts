@@ -49,7 +49,7 @@ const config = {
       screens: {
         sm: '576px',
         md: '768px',
-        lg: '920px',
+        lg: '930px',
         xl: '1200px',
         xxl: '1400px'
       },
@@ -140,7 +140,7 @@ const config = {
       },
       gridTemplateColumns: {
         projects: 'repeat(2, minmax(460px, 650px))',
-        'projects-sm': 'repeat(1, minmax(280px, 1fr))'
+        'projects-lg': 'repeat(1, minmax(280px, 1fr))'
       }
     }
   },
