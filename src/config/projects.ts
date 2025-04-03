@@ -8,13 +8,20 @@ export const projects = [
     linkText: 'Visit'
   },
   {
-    title: 'Simon Game',
-    category: 'Memory Game',
-    description:
-      'A game of lights and sounds in which players must repeat random sequences of lights played by the computer.',
-    image: '/images/simon.png',
-    link: 'https://mowael11.github.io/simon-game',
-    linkText: 'Play'
+    title: 'Italy Travel',
+    category: 'Informative',
+    description: 'An informational website showcasing, tours, and services offered by the agency.',
+    image: '/images/italytravel.jpg',
+    link: 'https://italytravelagency.com',
+    linkText: 'Visit'
+  },
+  {
+    title: 'AiPDF',
+    category: 'SaaS',
+    description: 'An open-source sofware to make chatting to your PDF files easy!',
+    image: '/images/aipdf.png',
+    link: 'https://aipdf.mowael.com',
+    linkText: 'Visit'
   },
   {
     title: 'Project Hub',
@@ -25,12 +32,13 @@ export const projects = [
     linkText: 'Visit'
   },
   {
-    title: 'AiPDF',
-    category: 'SaaS',
-    description: 'An open-source sofware to make chatting to your PDF files easy!',
-    image: '/images/aipdf.png',
-    link: 'https://aipdf.mowael.com',
-    linkText: 'Visit'
+    title: 'Simon Game',
+    category: 'Memory Game',
+    description:
+      'A game of lights and sounds in which players must repeat random sequences of lights played by the computer.',
+    image: '/images/simon.png',
+    link: 'https://mowael11.github.io/simon-game',
+    linkText: 'Play'
   },
   {
     title: 'Freelance Web',
